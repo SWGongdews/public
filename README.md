@@ -1,1 +1,1 @@
-# pulic
+# public
