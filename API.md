@@ -10,7 +10,7 @@
 ## PART1. 회원 관련(고유한 ID URL에 사용하기)
 
 ### 1. 회원가입
-/users/signup
+/users/signup<br>
 : 성공 여부를 status로 리턴<br>
 <전달값>
 - 아이디
@@ -52,7 +52,7 @@
 <br><br>
 
 ### 3. 로그인
-/users/login<br>
+/users/login <br>
 : 성공 여부를 status로 리턴<br>
 <전달값>
 - 아이디 
@@ -76,6 +76,7 @@
 - 성공 시 아이디 값 + status 값, 실패 시 status만
 
 4-2. [이메일 인증]
+/users/findidemail<br>
 - 이름
 - 이메일
 
@@ -88,6 +89,7 @@
 ### 5. 비밀번호 찾기
 : 성공 여부를 status로 리턴<br>
 5-1. [휴대폰 인증]<br>
+/users/findpwid<br>
 <전달값>
 - 아이디
 - 휴대폰번호<br>
@@ -96,6 +98,7 @@
 - 성공 여부의 status 값
 
 5-2. [이메일 인증]<br>
+/users/findpw/email<br>
 <전달값>
 - 아이디
 - 이메일
@@ -108,6 +111,7 @@
 
 ### 6. 장바구니
 6-1. 장바구니 넣기<br>
+/basket/put/{userIdx}<br>
 : 밑의 3개의 값을 받아서 테이블에 넣기, 실패 성공을 return status<br>
 <전달값>
 - 상품 고유아이디
@@ -118,6 +122,7 @@
 - 성공 여부의 status 값
 
 6-2. 장바구니 보기<br>
+/basket/view/{userIdx}<br>
 : 사용자 아이디를 받아 이 사용자와 관련된 데이터 베이스에서 프론트에서 필요한 값을 전달<br>
 <전달값>
 - 사용자 아이디
@@ -129,6 +134,7 @@
 <br><br>
 
 ### 7. 리뷰쓰기
+/review/{userIdx}<br>
 : 리뷰 작성 여부를 데이터 베이스에 true/false로 저장 후 프론트의 요청이 있을 때 이 true/false를 리턴, 프론트가 리뷰 페이지를 만드는데 필요한 정보들을 프론트에 전달<br>
 (1) 작성가능 후기 - true로 표시<br>
 
@@ -144,6 +150,7 @@
 <br><br>
 
 ### 8. 내가 누른 좋아요
+/like/{userIdx}<br>
 : 프론트에 좋아요 관련 테이블 데이터 전달<br>
 <전달값>
 - 상품 고유아이디
