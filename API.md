@@ -10,6 +10,7 @@
 ## PART1. 회원 관련(고유한 ID URL에 사용하기)
 
 ### 1. 회원가입
+/users/signup
 : 성공 여부를 status로 리턴<br>
 <전달값>
 - 아이디
@@ -31,6 +32,7 @@
 
 ### 2. 중복확인
 2-1. 아이디 중복확인<br>
+ /users/duplicationidcheck
 : 성공여부 return true/false<br>
 <전달값>
 - 아이디<br>
@@ -40,6 +42,7 @@
 
 
 2-2. 이메일 중복확인<br>
+/users/duplicationemailcheck
 : 성공여부 return true/false<br>
 <전달값>
 - 이메일<br>
@@ -49,6 +52,7 @@
 <br><br>
 
 ### 3. 로그인
+/users/login<br>
 : 성공 여부를 status로 리턴<br>
 <전달값>
 - 아이디 
@@ -63,6 +67,7 @@
 ### 4. 아이디 찾기
 : 성공했을 때 아이디 값과 status, 실패했을 때는 status만<br>
 4-1. [휴대폰 인증]<br>
+/users/findidphone<br>
 <전달값>
 - 이름
 - 휴대폰번호<br>
