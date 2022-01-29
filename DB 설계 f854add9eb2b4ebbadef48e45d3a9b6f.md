@@ -61,14 +61,44 @@ constraint FK_order_productIdx_product_productIdx
 ###Review
 ###Product
 ###LikeProduct
+# Review(리뷰), Product(상품), LikeProduct(좋아요한 상품)
 
-[Review(리뷰), Product(상품), LikeProduct(좋아요한 상품)](DB%20%E1%84%89%E1%85%A5%E1%86%AF%E1%84%80%E1%85%A8%20f854add9eb2b4ebbadef48e45d3a9b6f/Review(%E1%84%85%E1%85%B5%E1%84%87%E1%85%B2),%20Product(%E1%84%89%E1%85%A1%E1%86%BC%E1%84%91%E1%85%AE%E1%86%B7),%20LikeProduct(%E1%84%8C%E1%85%A9%E1%87%82%E1%84%8B%E1%85%A1%E1%84%8B%E1%85%AD%206154159ed7ae4e15b5f06c4a447a4630.md)
+## Review(리뷰)
 
-###Search
-###Category
-###Delivery
+| PK, FK | Name | Comment | Type |
+| --- | --- | --- | --- |
+| PK | reviewId | 리뷰 고유ID | Long |
+| FK | productId | 상품ID | Long |
+| FK | userId | 고객의 고유 ID | Long |
+|  | reviewTitle | 리뷰 제목 | varchar(45) |
+|  | reviewContent | 리뷰 내용 | varchar(45) |
+|  | reviewDate | 리뷰 작성일 | Date |
+|  | reviewImage | 리뷰에 담기는 사진 | varchar(45) |
+|  | createdAt | 생성 시간 | timestamp |
+|  | updatedAt | 업데이트 시간 | timestamp |
+|  | status | 상태 | char |
 
-[Search(검색), Category(카테고리, Delivery(배송)](DB%20%E1%84%89%E1%85%A5%E1%86%AF%E1%84%80%E1%85%A8%20f854add9eb2b4ebbadef48e45d3a9b6f/Search(%E1%84%80%E1%85%A5%E1%86%B7%E1%84%89%E1%85%A2%E1%86%A8),%20Category(%E1%84%8F%E1%85%A1%E1%84%90%E1%85%A6%E1%84%80%E1%85%A9%E1%84%85%E1%85%B5,%20Delivery(%E1%84%87%E1%85%A2%E1%84%89%E1%85%A9%E1%86%BC)%207e582fb7ca324a44aa1c899878ef07e6.md)
+## Product(상품)
+
+| PK, FK | Name | Comment | Type |
+| --- | --- | --- | --- |
+| PK | productId | 상품 고유Id | Long |
+|  | name | 상품명 | varchar(45) |
+|  | price | 상품의 가격 | Long |
+|  | category | 카테고리 | varchar(45) |
+|  | unit | 판매 단위 | Long |
+|  | volume | 판매 용량 | Long |
+|  | delivery | 배송구분 | varchar(45) |
+|  | expirationDate | 유통기한 | varchar(45) |
+|  | detail | 상세정보 | varchar(45) |
+
+## LikeProduct(좋아요한 상품)
+
+| PK, FK | Name | Comment | Type |
+| --- | --- | --- | --- |
+| FK | productId | 좋아요한 상품의 Id | Long |
+| FK | userId | 좋아요를 누른 고객의 Id | Long |
+|  | status | 상태 | char |
 
 ```
 create table animal
@@ -90,3 +120,43 @@ create table animal
     comment '동물 테이블';
 
 ```
+###Search
+###Category
+###Delivery
+# Search(검색), Category(카테고리, Delivery(배송)
+
+Search Table
+
+| PK, FK | Name | Comment | Type |
+| --- | --- | --- | --- |
+| PK | searchIdx | 검색 고유 인덱스 | long |
+| FK | userIdx | 유저 고유 인덱스 | long |
+|  | content | 입력값 | varchar(45) |
+|  | createdAt | 생성 날짜 | timestamp |
+|  | updatedAt | 업데이트 날짜 | timestamp |
+|  | status | 유저 계정 상태 | char(45) |
+
+Category Table
+
+| Key | Name | Comment | Type |
+| --- | --- | --- | --- |
+| PK | categoryIdx | 카테고리 고유 인덱스 | long |
+|  | categoryName | 카테고리명 | varchar(45) |
+|  | categoryImage | 카테고리 이미지 | varchar(45) |
+|  | createAt | 생성 날짜 | timestamp |
+|  | updatedAt | 업데이트 날짜 | timestamp |
+|  | status | 유저 계정 상태 | char(45) |
+
+Delivery Table
+
+| Key | Name | Comment | Type |
+| --- | --- | --- | --- |
+| PK | deliveryIdx | 배송 고유 인덱스 | long |
+|  | deliveryCompany | 배송회사 | varchar(45) |
+|  | deliveryPrice | 배송가격 | int |
+|  | deliveryDate | 배송시간(며칠이 걸리는) | int |
+|  | createAt | 생성 날짜 | timestamp |
+|  | updatedAt | 업데이트 날짜 | timestamp |
+|  | status | 유저 계정 상태 | char(45) |
+
+`long`
