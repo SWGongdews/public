@@ -65,7 +65,7 @@
 <br><br>
 
 ### 4. 아이디 찾기
-: 성공했을 때 아이디 값과 status, 실패했을 때는 status만<br>
+: 성공했을 때 아이디 값(변수는 id로)과 status, 실패했을 때는 status만<br>
 4-1. [휴대폰 인증]<br>
 /users/findidphone<br>
 <전달값>
