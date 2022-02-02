@@ -13,16 +13,16 @@
 /users/signup<br>
 : 성공 여부를 status로 리턴<br>
 <전달값>
-- 아이디
-- 비밀번호
+- 아이디 id
+- 비밀번호 password
 - (비밀번호 확인)
-- 이름
-- 이메일
-- 휴대폰 번호
-- 우편번호
-- 주소
-- 성별
-- 생년월일(-로 구분해서 전달)<br>
+- 이름 name
+- 이메일 email
+- 휴대폰 번호 phone
+- 우편번호 postcode
+- 주소 address
+- 성별 gender
+- 생년월일(-로 구분해서 전달) birth<br>
 
 <가져오는 값>
 - 회원 가입 성공 여부 status 값
