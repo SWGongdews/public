@@ -90,7 +90,7 @@
 ### 5. 비밀번호 찾기
 : 성공 여부를 status로 리턴<br>
 5-1. [휴대폰 인증]<br>
-/users/findpwid<br>
+/users/findpw/id<br>
 <전달값>
 - 아이디
 - 휴대폰번호<br>
