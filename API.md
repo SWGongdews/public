@@ -165,11 +165,11 @@
 <br><br>
 
 ## PART3. 상품 관련
-- 상품 등록: products/create
-- 모든 상품 정보 가져오기: /products/getAll
-- 상품 디테일: /products/get/{id}
-- 이 상품 어때요?: products/random-items
-- 놓치면 후회할 가격!: products/sale-items
+- 상품 등록(POST): products/create                  보내는거(그냥 OK만 보낼 수 있고 원하면 만들어진 상품객체를 보낼 수 있음)
+- 모든 상품 정보 가져오기(GET): /products/getAll    보내는거(JSON body에 상품 정보들을 묶어서 보냄)
+- 상품 디테일(GET): /products/get/{id}              보내는거(공부중..)
+- 이 상품 어때요?(GET): products/random-items       보내는거(JSON body에 상품 정보들을 묶어서 보냄)
+- 놓치면 후회할 가격!(GET): products/sale-items     보내는거(JSON body에 상품 정보들을 묶어서 보냄)
 
 
 ## PART2. 주문 관련
