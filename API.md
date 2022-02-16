@@ -165,6 +165,12 @@
 <br><br>
 
 ## PART3. 상품 관련
+상품 등록: products/create
+모든 상품 정보 가져오기: /products/getAll
+상품 디테일: /products/get/{id}
+이 상품 어때요?: products/random-items
+놓치면 후회할 가격!: products/sale-items
+
 
 ## PART2. 주문 관련
 
